@@ -25,5 +25,13 @@ Relatório das decisões tomadas ao longo do projeto:
    -Se não houver previamente uma outra reserva para o quarto na data pretendida pelo cliente;
    -O quarto não estar em manutenção.
 
--> No início do projeto pensei adicionar uma data de início e data fim para as manutenções no entanto, num cenário real é muito pouco provável prever quando a manutenção 
-irá acabar
+-> No início do projeto pensei adicionar uma data de início e data fim para as manutenções no entanto, num cenário real é muito pouco provável prever quando a manutenção irá acabar.
+
+-> Alguns métodos estão implementados (por exemplo, verificar disponibilidade na interface do cliente), no entanto, após reflexão, percebi que talvez não fizesse
+sentido , pois numa situação real, um cliente apenas quer fazer reserva e não consultar a disponibilidade de um quarto (isso talvez seja apenas útil ao funcionário e gestor do hotel), além disso, nesse método é necessário fornecer o id do quarto a verificar, esses detalhes técnicos não devem ser exigidos ao cliente.
+
+-> Método registar ocupação definido no diagrama de classes está implícito nos métodos fazer reserva / confirmar reserva, quando um cliente deseja fazer uma reserva,
+esse pedido é enviado para o ficheiro reservasPendestes.json e fica pendente de confirmação, quando o gestor ou funcionário confirmarem a reserva, o quarto fica ocupado nesse periodo de tempo.
+
+-> Adição de um novo "método" para remover reservas que já foram confirmadas, só o funcionário e gestor podem remover essas reservas.
+
