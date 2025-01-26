@@ -1,10 +1,10 @@
 Relatório das decisões tomadas ao longo do projeto:
 
 -> Na descrição das funcionalidades a implementar está referido: "Reserva de quartos por parte dos hóspedes: apenas os funcionários ou gestor podem fazer reservas"
--A interpretação que eu fiz foi: clientes podem fazer um pedido para reserva, mas fica pendente de confirmação.
+-A interpretação fizemos foi: clientes podem fazer um pedido para reserva, mas fica pendente de confirmação.
 -Os gestores e funcionários ficam posteriormente responsáveis por confirmar esse pedido
 
--> No diagrama de classes está uma classe "Pagamento" , como não se exigiu autenticação achei que não faria sentido implementar esta classe.
+-> No diagrama de classes está uma classe "Pagamento" , como não se exigiu autenticação achamos que não faria sentido implementar esta classe.
 -Pois seria necessário criar uma carteira para cada cliente (autenticação);
 
 -> Como mostrado no diagrama de use cases, apenas o gestor do sistema tem a possibilidade de criar, remover e alterar características dos quartos.
@@ -17,7 +17,7 @@ Relatório das decisões tomadas ao longo do projeto:
    -Outra solução possível seria utilizar uma base de dados local, mas json é mais rápido e evita a criação manual de queries
 
 -> Para os testes, foram criados 2 ficheiros extra, "reservasPendentesTeste.json" e "quartosTeste,json"
-   -Achei que faria sentido separar ficheiros de teste, para evitar possíveis inconsistências nos dados.
+   -Achamos que faria sentido separar ficheiros de teste, para evitar possíveis inconsistências nos dados.
    -Os ficheiros contêm as reservas pendentes e os quartos, respectivamente.
    -Originais : "reservasPendentes.json" e "quartos.json".
 
@@ -25,7 +25,7 @@ Relatório das decisões tomadas ao longo do projeto:
    -Se não houver previamente uma outra reserva para o quarto na data pretendida pelo cliente;
    -O quarto não estar em manutenção.
 
--> No início do projeto pensei adicionar uma data de início e data fim para as manutenções no entanto, num cenário real é muito pouco provável prever quando a manutenção irá acabar.
+-> No início do projeto pensámos adicionar uma data de início e data fim para as manutenções, no entanto, num cenário real, é muito pouco provável prever quando a manutenção irá acabar.
 
 -> Alguns métodos estão implementados (por exemplo, verificar disponibilidade na interface do cliente), no entanto, após reflexão, percebi que talvez não fizesse
 sentido , pois numa situação real, um cliente apenas quer fazer reserva e não consultar a disponibilidade de um quarto (isso talvez seja apenas útil ao funcionário e gestor do hotel), além disso, nesse método é necessário fornecer o id do quarto a verificar, esses detalhes técnicos não devem ser exigidos ao cliente.
